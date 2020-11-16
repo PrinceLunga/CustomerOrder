@@ -1,15 +1,16 @@
 package Services.Implementation;
 
 import Model.Customer;
+import Services.Interface.ICustomerService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerService {
+public class CustomerService implements ICustomerService {
 
     private List<Customer> customerList = new ArrayList<Customer>();
 
-    private String addCustomer(Customer model)
+    public String addCustomer(Customer model)
     {
         try
         {
@@ -26,7 +27,7 @@ public class CustomerService {
         return null;
     }
 
-    private Object[] getAllCustomers()
+    public Object[] getAllCustomers()
     {
         return customerList.toArray();
     }
