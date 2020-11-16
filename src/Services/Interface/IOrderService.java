@@ -5,8 +5,10 @@ import Model.Customer;
 public interface IOrderService {
 
     String placeOrder(Customer model);
-    
+
     String cancelOrder(Customer model);
+
+    String approveOrder(Customer model);
 
     Object[] getAllOrders();
 }
